@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hunting Github</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <style>
+    .user {
+        width: 50px;
+        height: 20px;
+    }
+    </style>
+</head>
+<body>
+    <button id="btn">Get Name</button>
+
+    <div class="user"></div>
+
+    <script type="text/javascript">
+    $('#btn').click(function(){
+        $.get("https://api.github.com/users/rachelykim", displayName);
+    });
+        
+    function displayName(data) {
+    $('div').html("<p>"+data.login+"</p>");
+    }
+    </script>
+
+</body>
+</html>

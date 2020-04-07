@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Survey Form</title>   
+</head>
+<body>
+    <div class="wrapper">
+        <div class="formbox">
+            <h1>Survey Form</h1>
+            <br>
+            <hr>
+            <br>
+            <form action='/process' method='POST' id="surveyform">
+                Your Name:<input type="text" name="name" id="surveyform">
+                <br>
+                <br>
+                Location:<select name="location" id="surveyform">
+                    <option value="seattle">Seattle</option>
+                    <option value="sanjose">San Jose</option>
+                    <option value="chicago">Chicago</option>
+                    <option value="washington">Washington DC</option>
+                    <option value="tulsa">Tulsa</option>
+                    <option value="dallas">Dallas</option>
+                    <option value="losangeles">Los Angeles</option>
+                    <option value="online">Online</option>
+                </select>
+                <br>
+                Favorite Language:<select name="language" id="surveyform">
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                    <option value="rails">Ruby on Rails</option>
+                    <option value="ios">iOS Swift</option>
+                    <option value="mean">MEAN</option>
+                    <option value="php">PHP</option>
+                    <option value="netcore">C# .net</option>
+                </select>
+                <br>
+                Comment (optional):<br>
+                <textarea rows="4" cols="50" id="surveyform" name="comment"></textarea>
+                <br>
+                <input type='submit' value='Submit' id="surveyform">
+
+            </form>    
+        </div>
+
+    </div>
+        
+</body>
+</html>

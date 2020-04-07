@@ -1,0 +1,48 @@
+<div style="text-align:center">
+  <h1>
+    {{ title }}
+  </h1>
+
+  <h2>New Task</h2>
+  <form (submit)="newTask()">
+    <p>{{ new_task | json }}</p>
+    <input type="text" name="new_task.title" [(ngModel)]="new_task.title" placeholder="Title" />
+    <br>
+    <br>
+    <input type="text" name="new_task.description" [(ngModel)]="new_task.description" placeholder="Description" />
+    <br>
+    <br>
+    <input type="submit" value="Create Task" />
+  </form>
+
+  <h2>Task List</h2>
+
+  <button (click)="getTasks($event)">Get All Tasks</button>
+
+  <p *ngFor="let task of tasks" style="background-color: #EEE; padding: 5px; border-radius: 15px; width: 30%; margin: 10px auto;">
+    <b>{{task['title']}}</b>
+    <br>
+    <br>
+    <button (click)="showOne( task['_id'] )">Details</button> |
+    <button (click)="updated_task = task">Update</button> |
+    <button (click)="deleteTask( task['_id'] )">Delete</button>
+    <br>
+    <br>
+
+  </p>
+
+  <app-task *ngIf="selectedTask" [showOne]="selectedTask"></app-task> 
+
+  <h2>Edit Task</h2>
+  <form (submit)="editTask( updated_task._id )">
+    <p>{{ updated_task | json }}</p>
+    <input type="text" name="updated_task.title" [(ngModel)]="updated_task.title" placeholder="Title" />
+    <br>
+    <br>
+    <input type="text" name="updated_task.description" [(ngModel)]="updated_task.description" placeholder="Description" />
+    <br>
+    <br>
+    <input type="submit" value="Save" />
+  </form>
+
+</div>

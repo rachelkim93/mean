@@ -1,0 +1,25 @@
+.one-cake-container{
+    width: 1085px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    margin: 0px 20px;
+    padding: 10px;
+}
+
+.rating{
+    width: 400px;
+    height: auto;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.show-cake{
+    display: inline-block;
+}
+
+.show-cake img{
+    width: 200px;
+    border: 1px solid #555;
+    border-radius: 10px;
+    text-align: left;
+}
